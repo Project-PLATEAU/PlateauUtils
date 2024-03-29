@@ -7,7 +7,7 @@
 
 ## 2. 「Plateau Utils」について
 [「SAR衛星解析による洪水被害の推定システム」](https://github.com/Project-PLATEAU/SAR-image-based-flood-damage-detector)では、人工衛星観測データ（SARデータ）から分析した浸水範囲と3D都市モデルの地形モデル及び建築物モデルをマッチングさせることで、家屋単位での浸水深の算出および被災判定を行います。  
-「Plateau Utils」は、3D都市モデルが持つ家屋の属性情報を抽出し、Pythonライブラリ上で扱えるようにするためのPythonスクリプトです。
+この処理の一部として、「Plateau Utils」は、3D都市モデルが持つ家屋の属性情報を抽出し、Pythonライブラリ上で扱えるようにする機能を提供します。
 
 本システムの詳細については[技術検証レポート](https://www.mlit.go.jp/plateau/file/libraries/doc/plateau_tech_doc_0071_ver01.pdf)を参照してください。
 

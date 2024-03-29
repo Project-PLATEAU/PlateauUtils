@@ -1,0 +1,40 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "plateauutils"
+description = "A collection of utilities for the Plateau project"
+readme = "README.rst"
+license = {file = "LICENSE"}
+classifiers = [
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+]
+version = "0.0.15"
+dependencies = [
+    "click",
+    "numpy",
+    "pandas",
+    "Pillow",
+    "py3dtiles",
+    "pyproj",
+    "requests",
+    "reearthcmsapi",
+    "shapely",
+    "tqdm",
+]
+authors = [
+    {name = "Eukarya Inc."},
+]
+requires-python = ">=3.9"
+repository = "https://github.com/eukarya-inc/plateauutils"
+keywords = ['plateau']
+
+[tool.hatch.build]
+exclude = ["tests/*"]
+
+[project.urls]
+"Homepage" = "https://eukarya-inc.github.io/plateauutils/"
+"Bug Reports" = "https://github.com/eukarya-inc/plateauutils/issues"
+"Source" = "https://github.com/eukarya-inc/plateauutils"

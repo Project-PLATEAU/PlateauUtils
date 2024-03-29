@@ -1,0 +1,287 @@
+{
+  "items": [
+    {
+      "createdAt": "2023-01-13T09:56:53.568Z",
+      "fields": [
+        {
+          "id": "01gmcy3r25sqmg2s2av3vw2cke",
+          "key": "specification",
+          "type": "select",
+          "value": "\u7b2c2.0\u7248"
+        },
+        {
+          "id": "01gmcy6hqqf66v7afazm4z4p8m",
+          "key": "citygml",
+          "type": "asset",
+          "value": "01gw9p4cy4abdkws8b5g8bs3v7"
+        },
+        {
+          "id": "01gmmqx8hkpygt6sf4h5h2bdww",
+          "key": "citygml_geospatialjp",
+          "type": "asset",
+          "value": null
+        },
+        {
+          "id": "01gmmqyjfeag3m06jkj9mp3ydt",
+          "key": "catalog",
+          "type": "asset",
+          "value": "01gw9p8m4tw063egrk1zsxva17"
+        },
+        {
+          "id": "01gmmr0t8sx81c1hb71hjhsse9",
+          "key": "conversion_enabled",
+          "type": "select",
+          "value": "\u5909\u63db\u3057\u306a\u3044"
+        },
+        {
+          "id": "01gmmr1q66gybkwyqr519x8sg1",
+          "key": "devide_odc",
+          "type": "select",
+          "value": "\u5206\u5272\u3059\u308b"
+        },
+        {
+          "id": "01gmmr7kjpbxxqvw9jq8de4kw5",
+          "key": "prcs",
+          "type": "select",
+          "value": "\u7b2c1\u7cfb"
+        },
+        {
+          "id": "01gmmrgy8aqg6xd0186489pky3",
+          "key": "prefecture",
+          "type": "select",
+          "value": "\u6771\u4eac\u90fd"
+        },
+        {
+          "id": "01gmmrhdgenyt5s5ghjp0vp3zz",
+          "key": "city_name",
+          "type": "text",
+          "value": "\u897f\u6771\u4eac\u5e02"
+        },
+        {
+          "id": "01gmmrhyz1d87v8pykns9911xp",
+          "key": "description_bldg",
+          "type": "textArea",
+          "value": "\u571f\u5730\u5229\u7528\u73fe\u6cc1\u30fb\u5efa\u7269\u73fe\u6cc1\u8abf\u67fb\u306e\u7d50\u679c\u3084\u822a\u7a7a\u5199\u771f\u7b49\u3092\u7528\u3044\u3066\u69cb\u7bc9\u3057\u305fLOD1\u53ca\u3073LOD2\u306e3D\u90fd\u5e02\u30e2\u30c7\u30eb\u3002\n\u30c6\u30af\u30b9\u30c1\u30e3\u4ed8\u304d\u306eLOD2\u30e2\u30c7\u30eb\u306f\u90fd\u5e02\u518d\u751f\u7279\u5225\u63aa\u7f6e\u6cd5\u7b2c2\u6761\u7b2c3\u9805\u306b\u57fa\u3065\u304f\u90fd\u5e02\u518d\u751f\u7dca\u6025\u6574\u5099\u5730\u57df\uff08\u7dca\u6025\u304b\u3064\u91cd\u70b9\u7684\u306b\u5e02\u8857\u5730\u306e\u6574\u5099\u3092\u63a8\u9032\u3059\u3079\u304d\u5730\u57df\uff09\u3092\u4e2d\u5fc3\u306b\u69cb\u7bc9\u3002\n\u90fd\u5e02\u8a08\u753b\u6cd5\u7b2c6\u6761\u306b\u57fa\u3065\u304f\u90fd\u5e02\u8a08\u753b\u57fa\u790e\u8abf\u67fb\u7b49\u306e\u571f\u5730\u30fb\u5efa\u7269\u5229\u7528\u60c5\u5831\u7b49\u3092\u5efa\u7269\u306e\u5c5e\u6027\u60c5\u5831\u3068\u3057\u3066\u4ed8\u52a0\u3002\n2022\u5e744\u6708\u307e\u3067\u306b\u4ed5\u69d8\u66f8\u7b49\u3068\u4f75\u305b\u3066\u653f\u5e9c\u6a19\u6e96\u5229\u7528\u898f\u7d04\u306b\u5247\u3063\u305f\u30aa\u30fc\u30d7\u30f3\u30c7\u30fc\u30bf\u3068\u3057\u3066\u516c\u958b\u4e88\u5b9a\u3002\n\n\u3014\u30e2\u30c7\u30eb\u4f5c\u6210\u3015\n{{\u4f1a\u793e\u540d}}\n{{\u4f1a\u793eHP\u306eURL}}\n\n\u3014\u30e2\u30c7\u30eb\u7de8\u96c6\u30fb\u5909\u63db\u3015\n{{\u4f1a\u793e\u540d}}\n\n\u3014\u51fa\u5178\u3015\n\u5efa\u7269\u56f3\u5f62\uff1a\u571f\u5730\u5229\u7528\u73fe\u6cc1\u30fb\u5efa\u7269\u73fe\u6cc1\u8abf\u67fb\uff08\u6771\u4eac\u90fd\uff09\uff082016\u5e74\u30fb2017\u5e74\uff09\n\"\u8a08\u6e2c\u9ad8\u3055\uff1aLOD1 \u822a\u7a7a\u30ec\u30fc\u30b6\u30fc\u6e2c\u91cf\uff08\u56fd\u969b\u822a\u696d\uff09\uff082020\u5e74\uff09\n\u3000\u3000\u3000\u3000\u3000LOD2 \u822a\u7a7a\u5199\u771f\u6e2c\u91cf\uff08\u56fd\u969b\u822a\u696d\uff09\uff082020\u5e74\uff09\"\n\u5efa\u7269\u30c6\u30af\u30b9\u30c1\u30e3\uff1a\u822a\u7a7a\u5199\u771f\uff08\u56fd\u969b\u822a\u696d\uff09\uff082020\u5e74\uff09\n\u5efa\u7269\u73fe\u6cc1\uff1a\u5efa\u7269\u73fe\u6cc1\u8abf\u67fb\uff08\u6771\u4eac\u90fd\uff09\uff082016\u5e74\u30fb2017\u5e74\uff09\n\u5efa\u7269\u540d\u79f0\uff1a\u56fd\u571f\u57fa\u672c\u60c5\u5831\uff08\u56fd\u571f\u5730\u7406\u9662\uff09\uff082020\u5e74\uff09\uff08\u56fd\u571f\u5730\u7406\u9662\u9577\u627f\u8a8d\uff08\u4f7f\u7528\uff09R2JHs844\uff09\n\u90fd\u5e02\u8a08\u753b\u6c7a\u5b9a\u60c5\u5831\uff1a\u90fd\u5e02\u8a08\u753b\u6c7a\u5b9a\u60c5\u5831GIS\u30c7\u30fc\u30bf\uff08\u6771\u4eac\u90fd\uff09\uff082018\u5e749\u670830\u65e5\uff09\n\u571f\u7802\u707d\u5bb3\u8b66\u6212\u533a\u57df\uff1a\u56fd\u571f\u6570\u5024\u60c5\u5831\uff08\u56fd\u571f\u4ea4\u901a\u7701\uff09\uff082020\u5e74\uff09\n\u6d25\u6ce2\u6d78\u6c34\u60f3\u5b9a\uff1a\u6771\u4eac\u90fd\u6d25\u6ce2\u6d78\u6c34\u60f3\u5b9a\uff08\u6771\u4eac\u90fd\uff09\uff082013\u5e74\uff09\n\u6d2a\u6c34\u6d78\u6c34\u60f3\u5b9a\u533a\u57df\uff1a\u3000\u5229\u6839\u5ddd\u6c34\u7cfb\u6c5f\u6238\u5ddd\u6d78\u6c34\u60f3\u5b9a\u533a\u57df\u56f3\uff08\u56fd\u571f\u4ea4\u901a\u7701\uff09\uff082018\u5e74\uff09\n\n\u3014\u7559\u610f\u70b9\u3015\n\u30fbLOD1\u306e\u300c\u8a08\u6e2c\u9ad8\u3055\u300d\u306f\u3001\u822a\u7a7a\u30ec\u30fc\u30b6\u30fc\u6e2c\u91cf\u306b\u3088\u3063\u3066\u53d6\u5f97\u3057\u305f\u5efa\u7269\u56f3\u5f62\u5185\u306e\u70b9\u7fa4\u30c7\u30fc\u30bf\u306e\u3046\u3061\u3001\u30ce\u30a4\u30ba\u9664\u53bb\u306e\u305f\u3081\u306b\u6700\u9ad8\u5024\u4ee5\u4e0b\uff15\uff05\u3092\u9664\u53bb\u3057\u305f\u70b9\u7fa4\u306e\u6700\u9ad8\u5024\u3068\u3057\u3066\u3044\u307e\u3059\u3002\n\u30fbLOD1\u306e\u30e2\u30c7\u30eb\u306e\u898b\u305f\u76ee\u4e0a\u306e\u9ad8\u3055\u306f\u822a\u7a7a\u30ec\u30fc\u30b6\u30fc\u6e2c\u91cf\u306b\u3088\u3063\u3066\u53d6\u5f97\u3057\u305f\u5efa\u7269\u56f3\u5f62\u5185\u306e\u70b9\u7fa4\u30c7\u30fc\u30bf\u306e\u4e2d\u592e\u5024\u3068\u3057\u3066\u3044\u307e\u3059\u3002\u307e\u305f\u3001\u300c\u8a08\u6e2c\u9ad8\u3055\u300d\u3092\u53d6\u5f97\u3067\u304d\u306a\u304b\u3063\u305f\u5efa\u7269\u306e\u898b\u305f\u76ee\u4e0a\u306e\u9ad8\u3055\u306f\u4e00\u5f8b\uff13\uff4d\u3068\u3057\u3066\u3044\u307e\u3059\u3002\n\u30fb\u51fa\u5178\u60c5\u5831\u306e\u53d6\u5f97\u5e74\u6b21\u306b\u3088\u308a\u3001\u5fc5\u305a\u3057\u3082\u6700\u65b0\u306e\u72b6\u6cc1\u3092\u53cd\u6620\u3057\u3066\u3044\u306a\u3044\u5834\u5408\u304c\u3042\u308a\u307e\u3059\u3002\n\u30fb\u90fd\u5e02\u306e\u533a\u57df\u5916\u306e\u5efa\u7269\u304c\u542b\u307e\u308c\u3066\u3044\u308b\u5834\u5408\u304c\u3042\u308a\u307e\u3059\u3002"
+        },
+        {
+          "id": "01gmmrjqw3j5egexdkgen852w5",
+          "key": "description_fld",
+          "type": "textArea",
+          "value": [
+            "\u3042ggggggaaaa"
+          ]
+        },
+        {
+          "id": "01gmmrk86t4scvd0k0t6vavkyf",
+          "key": "description_htd",
+          "type": "textArea",
+          "value": []
+        },
+        {
+          "id": "01gmmrkxe8aehyzn1p6ax1teh9",
+          "key": "description_lfld",
+          "type": "textArea",
+          "value": null
+        },
+        {
+          "id": "01gmmrmgsckw6fr3qkp9740y4a",
+          "key": "description_tnm",
+          "type": "textArea",
+          "value": []
+        },
+        {
+          "id": "01gmmrmwav42whmmek6mbs6vz2",
+          "key": "description_tran",
+          "type": "textArea",
+          "value": null
+        },
+        {
+          "id": "01gmmrn8g494npk0z7d2kbm2eb",
+          "key": "description_frn",
+          "type": "textArea",
+          "value": "hhh"
+        },
+        {
+          "id": "01gmmrnpbqza6s999tkxbee89c",
+          "key": "description_veg",
+          "type": "textArea",
+          "value": null
+        },
+        {
+          "id": "01gmmrp4d994yaag63rtv460gt",
+          "key": "description_luse",
+          "type": "textArea",
+          "value": null
+        },
+        {
+          "id": "01gmmrpv9j5ssw9gkmfgbebw6e",
+          "key": "description_lsld",
+          "type": "textArea",
+          "value": null
+        },
+        {
+          "id": "01gmmrqbej2rem0jfm8jx4y3hy",
+          "key": "description_urf",
+          "type": "textArea",
+          "value": []
+        },
+        {
+          "id": "01gmmrr84zrghkm26bytc6nhjw",
+          "key": "bldg",
+          "type": "asset",
+          "value": [
+            "01grcgebtcc9v0wnbf0ze30w15"
+          ]
+        },
+        {
+          "id": "01gmmrsdfh6hd1nzy7tvfwa7gn",
+          "key": "fld",
+          "type": "asset",
+          "value": [
+            "01gpq3386dn1sjmgrcv8khk1d3",
+            "01gpq339wfsfk9sq2m1p91v8xd"
+          ]
+        },
+        {
+          "id": "01gmmrsyg6pq0kqq132xwxfdqc",
+          "key": "tnm",
+          "type": "asset",
+          "value": []
+        },
+        {
+          "id": "01gmmrth6fhge8ymc605a9a4d4",
+          "key": "htd",
+          "type": "asset",
+          "value": []
+        },
+        {
+          "id": "01gmmrv88vv9hc0zfh7z0cvrtm",
+          "key": "ifld",
+          "type": "asset",
+          "value": []
+        },
+        {
+          "id": "01gmmrxxemx6enkz8w12aeetx8",
+          "key": "frn",
+          "type": "asset",
+          "value": []
+        },
+        {
+          "id": "01gmmrycn419yz4qnvv69pd8gv",
+          "key": "tran",
+          "type": "asset",
+          "value": [
+            "01gpq335d57qcm7rvd4br8ccv4"
+          ]
+        },
+        {
+          "id": "01gmmrys69ff22tje73m9hcxnm",
+          "key": "veg",
+          "type": "asset",
+          "value": []
+        },
+        {
+          "id": "01gmmrz4z6ssecw37vbv20yth6",
+          "key": "luse",
+          "type": "asset",
+          "value": [
+            "01gpq336965q11579arek48z49"
+          ]
+        },
+        {
+          "id": "01gmmrzf6wtptr7ytvyd1mvrtz",
+          "key": "lsld",
+          "type": "asset",
+          "value": [
+            "01gpq336r6xwkcdw7qcnam3s2y"
+          ]
+        },
+        {
+          "id": "01gmmrzwgsn5y45rtggppvc7pd",
+          "key": "urf",
+          "type": "asset",
+          "value": [
+            "01gpq33a8hqfkv9j9f5rgqvsj0",
+            "01gpq33an6vm7h2qt4ez6e6cf3",
+            "01gpq33b072r3jxbf1qj3s4e9k"
+          ]
+        },
+        {
+          "id": "01gmms0688qm2f14wdkbcaznds",
+          "key": "all",
+          "type": "asset",
+          "value": "01gpq662t3mdmpcbv2tghfexyr"
+        },
+        {
+          "id": "01gmms1s4sm120z9msshhv8yw4",
+          "key": "conversion_status",
+          "type": "select",
+          "value": "\u5b8c\u4e86"
+        },
+        {
+          "id": "01gmms35akb7tj2nsbj70m3dpe",
+          "key": "catalog_status",
+          "type": "select",
+          "value": "\u5b8c\u4e86"
+        },
+        {
+          "id": "01gmms3mpy3ta2s40ddn27t4w4",
+          "key": "max_lod",
+          "type": "asset",
+          "value": "01gpq662t3mdmpcbv2tghfexyr"
+        },
+        {
+          "id": "01gmms60mvwb3xxxxbdpr9y6wk",
+          "key": "max_lod_status",
+          "type": "select",
+          "value": "\u5b8c\u4e86"
+        },
+        {
+          "id": "01gmms6k7s5sermt6kbh6f1gdp",
+          "key": "search_index",
+          "type": "asset",
+          "value": [
+            "01gs6zdzapnh63ne5n7fct6rh3"
+          ]
+        },
+        {
+          "id": "01gmms90n9sce9sarjmnhemqyc",
+          "key": "search_index_status",
+          "type": "select",
+          "value": "\u5b8c\u4e86"
+        },
+        {
+          "id": "01gpn4fwmepb2jt686ek1a1kjn",
+          "key": "dictionary",
+          "type": "asset",
+          "value": null
+        },
+        {
+          "id": "01grtvzx1wkapje4qqk5ffyv66",
+          "key": "dic",
+          "type": "textArea",
+          "value": null
+        },
+        {
+          "id": "01gw9gq6gdfrjmtr57pbevh3q4",
+          "key": "sdk_publication",
+          "type": "select",
+          "value": "\u516c\u958b\u3059\u308b"
+        }
+      ],
+      "id": "01gpn8z4600pcfs1g5qeyd5m7w",
+      "modelId": "01gmcwp081werw3w1dpgq42jm4",
+      "parents": [
+        "51449ae3-e503-42bd-a6c2-981a83ebc310"
+      ],
+      "refs": [
+        "latest"
+      ],
+      "updatedAt": "2023-08-02T19:35:48.832Z",
+      "version": "28a665b9-908f-4012-9b13-3e71a277e5f9"
+    }
+  ],
+  "page": 2,
+  "perPage": 50,
+  "totalCount": 51
+}

@@ -1,0 +1,159 @@
+{
+  "results": [
+    {
+      "all": {
+        "type": "asset",
+        "id": "01gpq662t3mdmpcbv2tghfexyr",
+        "url": "https://localhost:8081/assets/e8/73a09d-0d2e-4702-924a-16bdb5f49652/13229_nishitokyo-shi_maxlod.csv"
+      },
+      "bldg": [
+        {
+          "type": "asset",
+          "id": "01grcgebtcc9v0wnbf0ze30w15",
+          "url": "https://localhost:8081/assets/08/d417ee-412b-4c19-83c7-bf1df0c47785/13229_nishitokyo-shi_2022_3dtiles_1_op2_bldg_lod1.zip"
+        }
+      ],
+      "catalog": {
+        "type": "asset",
+        "id": "01gw9p8m4tw063egrk1zsxva17",
+        "url": "https://localhost:8081/assets/39/d8c61f-e218-46f9-bbc0-2b7fbd663a08/13229_nishitokyo-shi_catalog.xlsx"
+      },
+      "catalog_status": "完了",
+      "city_name": "西東京市aaabbbccc",
+      "citygml": {
+        "type": "asset",
+        "id": "01gw9p4cy4abdkws8b5g8bs3v7",
+        "url": "https://localhost:8081/assets/1e/b01fc6-2ce9-4277-983f-09f8069034f7/13229_nishitokyo-shi_2020_citygml_1.zip"
+      },
+      "conversion_enabled": "変換しない",
+      "conversion_status": "完了",
+      "description_bldg": "3D都市モデル。\nテクスチャ付きのLOD2モデルは都市再生特別措置法第2条第3項に基づく都市再生緊急整備地域（緊急かつ重点的に市街地の整備を推進すべき地域）を中心に構築。\n都市計画法第6条に基づく都市計画基礎調査等の土地・建物利用情報等を建物の属性情報として付加。\n2022年4月までに仕様書等と併せて政府標準利用規約に則ったオープンデータとして公開予定。\n\n〔モデル作成〕\n{{会社名}}\n{{会社HPのURL}}\n\n〔モデル編集・変換〕\n{{会社名}}\n\n〔出典〕\n建物図形：土地利用現況・建物現況調査（東京都）（2016年・2017年）\n\"計測高さ：LOD1 航空レーザー測量（国際航業）（2020年）\n　　　　　LOD2 航空写真測量（国際航業）（2020年）\"\n建物テクスチャ：航空写真（国際航業）（2020年）\n建物現況：建物現況調査（東京都）（2016年・2017年）\n建物名称：国土基本情報（国土地理院）（2020年）（国土地理院長承認（使用）R2JHs844）\n都市計画決定情報：都市計画決定情報GISデータ（東京都）（2018年9月30日）\n土砂災害警戒区域：国土数値情報（国土交通省）（2020年）\n津波浸水想定：東京都津波浸水想定（東京都）（2013年）\n洪水浸水想定区域：　利根川水系江戸川浸水想定区域図（国土交通省）（2018年）\n\n〔留意点〕\n・LOD1の「計測高さ」は、航空レーザー測量によって取得した建物図形内の点群データのうち、ノイズ除去のために最高値以下５％を除去した点群の最高値としています。\n・LOD1のモデルの見た目上の高さは航空レーザー測量によって取得した建物図形内の点群データの中央値としています。また、「計測高さ」を取得できなかった建物の見た目上の高さは一律３ｍとしています。\n・出典情報の取得年次により、必ずしも最新の状況を反映していない場合があります。\n・都市の区域外の建物が含まれている場合があります。",
+      "description_fld": [
+        "a"
+      ],
+      "description_frn": "hhh",
+      "description_htd": [],
+      "description_tnm": [],
+      "description_urf": [],
+      "devide_odc": "分割する",
+      "fld": [
+        {
+          "type": "asset",
+          "id": "01gpq3386dn1sjmgrcv8khk1d3",
+          "url": "https://localhost:8081/assets/88/d3dfa4-93e0-4097-9fe3-63e3adcc4dbf/kuromegawa-ochiaigawa-etc_l2.zip"
+        },
+        {
+          "type": "asset",
+          "id": "01gpq339wfsfk9sq2m1p91v8xd",
+          "url": "https://localhost:8081/assets/de/695c6e-2282-40e2-986d-68f1ed5be9f2/shakujiigawa-shirakogawa_l2.zip"
+        }
+      ],
+      "id": "01gpn8z4600pcfs1g5qeyd5m7w",
+      "lsld": [
+        {
+          "type": "asset",
+          "id": "01gpq336r6xwkcdw7qcnam3s2y",
+          "url": "https://localhost:8081/assets/be/11f95f-e303-42f1-91da-563d90206f3a/lsld.zip"
+        }
+      ],
+      "luse": [
+        {
+          "type": "asset",
+          "id": "01gpq336965q11579arek48z49",
+          "url": "https://localhost:8081/assets/d5/608d84-4f5a-4eef-8a2b-492c71087c7c/luse.zip"
+        }
+      ],
+      "max_lod": {
+        "type": "asset",
+        "id": "01gpq662t3mdmpcbv2tghfexyr",
+        "url": "https://localhost:8081/assets/e8/73a09d-0d2e-4702-924a-16bdb5f49652/13229_nishitokyo-shi_maxlod.csv"
+      },
+      "max_lod_status": "完了",
+      "prcs": "第1系",
+      "prefecture": "東京都",
+      "sdk_publication": "公開する",
+      "search_index_status": "完了",
+      "specification": "第2.0版",
+      "tran": [
+        {
+          "type": "asset",
+          "id": "01gpq335d57qcm7rvd4br8ccv4",
+          "url": "https://localhost:8081/assets/cb/239b4f-d1d3-440e-b4ad-f321b67b67d9/tran_lod1.zip"
+        }
+      ],
+      "urf": [
+        {
+          "type": "asset",
+          "id": "01gpq33a8hqfkv9j9f5rgqvsj0",
+          "url": "https://localhost:8081/assets/a9/05334f-61fa-42e2-a41e-f3e0e1cc12c5/FirePreventionDistrict.zip"
+        },
+        {
+          "type": "asset",
+          "id": "01gpq33an6vm7h2qt4ez6e6cf3",
+          "url": "https://localhost:8081/assets/d4/0a8519-aff4-4ea3-8a60-f82b74bc3159/HeightControlDistrict.zip"
+        },
+        {
+          "type": "asset",
+          "id": "01gpq33b072r3jxbf1qj3s4e9k",
+          "url": "https://localhost:8081/assets/46/0ddb3d-e5b1-43db-8b63-a8475212fc07/UseDistrict.zip"
+        }
+      ]
+    },
+    {
+      "catalog_status": "完了",
+      "citygml": {
+        "type": "asset",
+        "id": "01gpncy3nh42tgnghajx28ah38",
+        "url": "https://localhost:8081/assets/7a/22ad98-e8f2-4d68-af4f-c754f28bd49b/sample.zip"
+      },
+      "citygml_geospatialjp": {
+        "type": "asset",
+        "id": "01gpncs4c1q8xd502gx4tywnb4",
+        "url": "https://localhost:8081/assets/61/7249e0-6928-4627-ae75-449b3ce0b2a7/sample.zip"
+      },
+      "conversion_enabled": "変換しない",
+      "conversion_status": "完了",
+      "description_bldg": "土地利用現況・建物現況調査の結果や航空写真等を用いて構築したLOD1及びLOD2の3D都市モデル。\nテクスチャ付きのLOD2モデルは都市再生特別措置法第2条第3項に基づく都市再生緊急整備地域（緊急かつ重点的に市街地の整備を推進すべき地域）を中心に構築。\n都市計画法第6条に基づく都市計画基礎調査等の土地・建物利用情報等を建物の属性情報として付加。\n2022年4月までに仕様書等と併せて政府標準利用規約に則ったオープンデータとして公開予定。\n\n〔モデル作成〕\n{{会社名}}\n{{会社HPのURL}}\n\n〔モデル編集・変換〕\n{{会社名}}\n\n〔出典〕\n建物図形：土地利用現況・建物現況調査（東京都）（2016年・2017年）\n\"計測高さ：LOD1 航空レーザー測量（国際航業）（2020年）\n　　　　　LOD2 航空写真測量（国際航業）（2020年）\"\n建物テクスチャ：航空写真（国際航業）（2020年）\n建物現況：建物現況調査（東京都）（2016年・2017年）\n建物名称：国土基本情報（国土地理院）（2020年）（国土地理院長承認（使用）R2JHs844）\n都市計画決定情報：都市計画決定情報GISデータ（東京都）（2018年9月30日）\n土砂災害警戒区域：国土数値情報（国土交通省）（2020年）\n津波浸水想定：東京都津波浸水想定（東京都）（2013年）\n洪水浸水想定区域：　利根川水系江戸川浸水想定区域図（国土交通省）（2018年）\n\n〔留意点〕\n・LOD1の「計測高さ」は、航空レーザー測量によって取得した建物図形内の点群データのうち、ノイズ除去のために最高値以下５％を除去した点群の最高値としています。\n・LOD1のモデルの見た目上の高さは航空レーザー測量によって取得した建物図形内の点群データの中央値としています。また、「計測高さ」を取得できなかった建物の見た目上の高さは一律３ｍとしています。\n・出典情報の取得年次により、必ずしも最新の状況を反映していない場合があります。\n・都市の区域外の建物が含まれている場合があります。",
+      "description_fld": [],
+      "description_htd": [],
+      "description_tnm": [],
+      "description_urf": [],
+      "devide_odc": "分割する",
+      "dic": "{\r\n   \"admin\" : [\r\n      {\r\n         \"code\" : \"43\",\r\n         \"name\" : \"kumamoto-ken\",\r\n         \"description\" : \"熊本県\"\r\n      },\r\n      {\r\n         \"code\" : \"43101\",\r\n         \"name\" : \"kumamoto-shi_chuo-ku\",\r\n         \"description\" : \"熊本市 中央区\"\r\n      },\r\n      {\r\n         \"code\" : \"43102\",\r\n         \"name\" : \"kumamoto-shi_higashi-ku\",\r\n         \"description\" : \"熊本市 東区\"\r\n      },\r\n      {\r\n         \"code\" : \"43103\",\r\n         \"name\" : \"kumamoto-shi_nishi-ku\",\r\n         \"description\" : \"熊本市 西区\"\r\n      },\r\n      {\r\n         \"code\" : \"43104\",\r\n         \"name\" : \"kumamoto-shi_minami-ku\",\r\n         \"description\" : \"熊本市 南区\"\r\n      },\r\n      {\r\n         \"code\" : \"43105\",\r\n         \"name\" : \"kumamoto-shi_kita-ku\",\r\n         \"description\" : \"熊本市 北区\"\r\n      }\r\n   ],\r\n   \"fld\" : [\r\n      {\r\n         \"name\" : \"kikuchigawa_goushigawa-1_l2\",\r\n         \"description\" : \"菊池川水系合志川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"kikuchigawa_goushigawa-1_l1\",\r\n         \"description\" : \"菊池川水系合志川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"kikuchigawa_kikuchigawa_l1\",\r\n         \"description\" : \"菊池川水系菊池川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"kikuchigawa_kikuchigawa_l2\",\r\n         \"description\" : \"菊池川水系菊池川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_hamadogawa-1_l1\",\r\n         \"description\" : \"緑川水系浜戸川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_hamadogawa-1_l2\",\r\n         \"description\" : \"緑川水系浜戸川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_kasegawa_l2\",\r\n         \"description\" : \"緑川水系加勢川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_kasegawa_l1\",\r\n         \"description\" : \"緑川水系加勢川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_midorikawa_l2\",\r\n         \"description\" : \"緑川水系緑川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_midorikawa_l1\",\r\n         \"description\" : \"緑川水系緑川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_mifunegawa_l1\",\r\n         \"description\" : \"緑川水系御船川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_mifunegawa_l2\",\r\n         \"description\" : \"緑川水系御船川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"shirakawa_shirakawa-1_l1\",\r\n         \"description\" : \"白川水系白川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"shirakawa_shirakawa-1_l2\",\r\n         \"description\" : \"白川水系白川\",\r\n         \"admin\" : \"国\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"kikuchigawa_goushigawa-2_l2\",\r\n         \"description\" : \"菊池川水系合志川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_hamadogawa-2_l2\",\r\n         \"description\" : \"緑川水系浜戸川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_hamadogawa-2_l1\",\r\n         \"description\" : \"緑川水系浜戸川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_kengungawa_l2\",\r\n         \"description\" : \"緑川水系健軍川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_kengungawa_l1\",\r\n         \"description\" : \"緑川水系健軍川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_kiyamagawa_l1\",\r\n         \"description\" : \"緑川水系木山川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_kiyamagawa_l2\",\r\n         \"description\" : \"緑川水系木山川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_shoukeborigawa_l2\",\r\n         \"description\" : \"緑川水系藻器堀川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_shoukeborigawa_l1\",\r\n         \"description\" : \"緑川水系藻器堀川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_tenmeishinkawa_l2\",\r\n         \"description\" : \"緑川水系天明新川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_tenmeishinkawa_l1\",\r\n         \"description\" : \"緑川水系天明新川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_urugogawa_l2\",\r\n         \"description\" : \"緑川水系潤川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_urugogawa_l1\",\r\n         \"description\" : \"緑川水系潤川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_yakatagawa_l1\",\r\n         \"description\" : \"緑川水系矢形川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"midorikawa_yakatagawa_l2\",\r\n         \"description\" : \"緑川水系矢形川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"shirakawa_shirakawa-2_l1\",\r\n         \"description\" : \"白川水系白川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"shirakawa_shirakawa-2_l2\",\r\n         \"description\" : \"白川水系白川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"tsuboigawa_horikawa_l2\",\r\n         \"description\" : \"坪井川水系堀川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"tsuboigawa_iserigawa_l2\",\r\n         \"description\" : \"坪井川水系井芹川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"tsuboigawa_iserigawa_l1\",\r\n         \"description\" : \"坪井川水系井芹川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"tsuboigawa_tsuboigawa_l1\",\r\n         \"description\" : \"坪井川水系坪井川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L1（計画規模）\"\r\n      },\r\n      {\r\n         \"name\" : \"tsuboigawa_tsuboigawa_l2\",\r\n         \"description\" : \"坪井川水系坪井川\",\r\n         \"admin\" : \"都道府県\",\r\n         \"scale\" : \"L2（想定最大規模）\"\r\n      }\r\n   ],\r\n   \"tnm\" : [\r\n      {\r\n         \"name\" : \"43_1\",\r\n         \"description\" : \"熊本県津波浸水想定\"\r\n      }\r\n   ]\r\n}\r\n",
+      "dictionary": {
+        "type": "asset",
+        "id": "01grvkwq8jpz3zy9be72225tbh",
+        "url": "https://localhost:8081/assets/e7/69b020-38b3-4bc3-a2eb-0c02bd49a496/43100_kumamoto-shi_dict.json"
+      },
+      "id": "01gr2pvvnjnhr05ehec4cxz9a6",
+      "max_lod_status": "完了",
+      "prcs": "第1系",
+      "prefecture": "全国",
+      "search_index_status": "未実行",
+      "specification": "第2.0版"
+    },
+    {
+      "catalog_status": "エラー",
+      "conversion_enabled": "変換する",
+      "conversion_status": "未実行",
+      "description_bldg": "土地利用現況・建物現況調査の結果や航空写真等を用いて構築したLOD1及びLOD2の3D都市モデル。\nテクスチャ付きのLOD2モデルは都市再生特別措置法第2条第3項に基づく都市再生緊急整備地域（緊急かつ重点的に市街地の整備を推進すべき地域）を中心に構築。\n都市計画法第6条に基づく都市計画基礎調査等の土地・建物利用情報等を建物の属性情報として付加。\n2022年4月までに仕様書等と併せて政府標準利用規約に則ったオープンデータとして公開予定。\n\n〔モデル作成〕\n{{会社名}}\n{{会社HPのURL}}\n\n〔モデル編集・変換〕\n{{会社名}}\n\n〔出典〕\n建物図形：土地利用現況・建物現況調査（東京都）（2016年・2017年）\n\"計測高さ：LOD1 航空レーザー測量（国際航業）（2020年）\n　　　　　LOD2 航空写真測量（国際航業）（2020年）\"\n建物テクスチャ：航空写真（国際航業）（2020年）\n建物現況：建物現況調査（東京都）（2016年・2017年）\n建物名称：国土基本情報（国土地理院）（2020年）（国土地理院長承認（使用）R2JHs844）\n都市計画決定情報：都市計画決定情報GISデータ（東京都）（2018年9月30日）\n土砂災害警戒区域：国土数値情報（国土交通省）（2020年）\n津波浸水想定：東京都津波浸水想定（東京都）（2013年）\n洪水浸水想定区域：　利根川水系江戸川浸水想定区域図（国土交通省）（2018年）\n\n〔留意点〕\n・LOD1の「計測高さ」は、航空レーザー測量によって取得した建物図形内の点群データのうち、ノイズ除去のために最高値以下５％を除去した点群の最高値としています。\n・LOD1のモデルの見た目上の高さは航空レーザー測量によって取得した建物図形内の点群データの中央値としています。また、「計測高さ」を取得できなかった建物の見た目上の高さは一律３ｍとしています。\n・出典情報の取得年次により、必ずしも最新の状況を反映していない場合があります。\n・都市の区域外の建物が含まれている場合があります。",
+      "description_fld": [],
+      "description_htd": [],
+      "description_tnm": [],
+      "description_urf": [],
+      "devide_odc": "分割する",
+      "id": "01h65r7rg6z36mwyqjrjvf2zq8",
+      "max_lod_status": "未実行",
+      "prcs": "第1系",
+      "prefecture": "全国",
+      "sdk_publication": "公開しない",
+      "search_index_status": "未実行",
+      "specification": "第2.0版"
+    }
+  ],
+  "totalCount": 3,
+  "hasMore": true,
+  "limit": 50,
+  "offset": 0,
+  "page": 1
+}

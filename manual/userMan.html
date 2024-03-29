@@ -1,0 +1,218 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>操作マニュアル </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="操作マニュアル ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="操作マニュアル">操作マニュアル</h1>
+
+<h1 id="1-本書について">1 本書について</h1>
+<p>本書では、Plateau Utils（以下「本ライブラリ」という。）の利用手順について記載しています。</p>
+<h1 id="2-使い方">2 使い方</h1>
+<h2 id="2-1-ライブラリの機能一覧">2-1 ライブラリの機能一覧</h2>
+<p>本ライブラリの機能は、以下の通りである。</p>
+<table>
+<thead>
+<tr>
+<th>機能名</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>CityGML parser</td>
+<td>CityGMLのパーサー</td>
+</tr>
+<tr>
+<td>MVT parser</td>
+<td>MVTのパーサー</td>
+</tr>
+<tr>
+<td>Flood converter</td>
+<td>浸水タイルをXYZタイル及び3DTilesに変換する機能</td>
+</tr>
+</tbody>
+</table>
+<p>パーサーにより、以下の属性を抽出する。</p>
+<table>
+<thead>
+<tr>
+<th>名称</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gmlid</td>
+<td>id</td>
+</tr>
+<tr>
+<td>center</td>
+<td>中心座標</td>
+</tr>
+<tr>
+<td>min_height</td>
+<td>最小高さ</td>
+</tr>
+<tr>
+<td>measured_height</td>
+<td>測定高さ</td>
+</tr>
+<tr>
+<td>building_structure_type</td>
+<td>建物構造種別(コード)</td>
+</tr>
+<tr>
+<td>usage</td>
+<td>建物用途(コード)</td>
+</tr>
+</tbody>
+</table>
+<p>3D都市モデルのバージョン1.4、1.5、2.0、3.0に対応</p>
+<h2 id="2-2-citygml-parser">2-2 CityGML parser</h2>
+<p>CityGMLのパーサーを利用するには、ライブラリ内の<a href="https://github.com/eukarya-inc/plateauutils/blob/main/plateauutils/parser/city_gml_parser.py">parser/city_gml_parser.py</a>よりCityGMLParserをインポートしてください。
+3D都市モデルのCityGMLのZIPファイルのURLは<a href="https://www.geospatial.jp/ckan/dataset/plateau">G空間情報センター</a>から取得できます。</p>
+<p>以下はサンプルコードです。</p>
+<pre><code class="lang-python">&gt;&gt;&gt; from shapely.geometry import Point
+&gt;&gt;&gt; from plateauutils.mesh_geocorder.geo_to_mesh import point_to_meshcode
+&gt;&gt;&gt; point = Point(139.71475, 35.70078)
+&gt;&gt;&gt; mesh_code = point_to_meshcode(point, &quot;2/1&quot;)
+&gt;&gt;&gt; mesh_code
+'533945471'
+&gt;&gt;&gt; from shapely import from_wkt
+&gt;&gt;&gt; from plateauutils.parser.city_gml_parser import CityGMLParser
+&gt;&gt;&gt; target_polygon = from_wkt(&quot;POLYGON ((130.41249721501615 33.224722548534864, 130.41249721501615 33.22506264293093, 130.41621606802997 33.22506264293093, 130.41621606802997 33.224722548534864, 130.41249721501615 33.224722548534864))&quot;)
+&gt;&gt;&gt; parser = CityGMLParser(target_polygon)
+&gt;&gt;&gt; result = parser.download_and_parse(&quot;https://assets.cms.plateau.reearth.io/assets/d6/70821e-7f58-4f69-bc34-341875704e78/40203_kurume-shi_2020_citygml_3_op.zip&quot;, &quot;/tmp&quot;)
+&gt;&gt;&gt; result
+[{'gid': 'bldg_383f1804-aa34-4634-949f-f769e09fa92d', 'center': [130.41263587199947, 33.22489181671553], 'min_height': 3.805999994277954, 'measured_height': 9.3, 'building_structure_type': '非木造'}, {'gid': 'bldg_877dea60-35d0-4fd9-8b02-852e39c75d81', 'center': [130.41619367090038, 33.22492719812357], 'min_height': 4.454999923706055, 'measured_height': 3.0, 'building_structure_type': '非木造'},...]
+</code></pre>
+<h2 id="2-3-mvt-parser">2-3 MVT parser</h2>
+<p>MVTのパーサーを利用するには、ライブラリ内の<a href="https://github.com/eukarya-inc/plateauutils/blob/main/plateauutils/parser/mvt_tile_parser.py">parser/mvt_tile_parser.py</a>よりMvtTileParserをインポートしてください。
+3D都市モデルの3D Tiles/MVTのZIPファイルのURLは<a href="https://www.geospatial.jp/ckan/dataset/plateau">G空間情報センター</a>から取得できます。</p>
+<p>以下はサンプルコードです。</p>
+<pre><code class="lang-python">&gt;&gt;&gt; from plateauutils.parser.mvt_tile_parser import MvtTileParser
+&gt;&gt;&gt; target_polygon = from_wkt(&quot;POLYGON ((130.525689 33.323966, 130.522728 33.314069, 130.511441 33.308653, 130.501013 33.30937, 130.492516 33.318516, 130.493717 33.325831, 130.504618 33.332249, 130.512857 33.332213, 130.525689 33.323966))&quot;)
+&gt;&gt;&gt; parser = MvtTileParser(target_polygon)
+&gt;&gt;&gt; result = parser.download_and_parse(&quot;https://assets.cms.plateau.reearth.io/assets/43/53a0e1-cc14-4228-a5ef-19333a23596d/40203_kurume-shi_2020_3dtiles-mvt_3_op.zip&quot;, &quot;/tmp&quot;)
+&gt;&gt;&gt; result
+['/tmp/40203_kurume-shi_2020_3dtiles-mvt_3_op/luse/15/28254/13174.mvt']
+</code></pre>
+<h2 id="2-4-flood-converter">2-4 Flood converter</h2>
+<p>浸水タイルを3DTilesに変換する機能を利用するには、ライブラリ内の<a href="https://github.com/eukarya-inc/plateauutils/blob/main/plateauutils/flood_converter/flood_to_3dtiles.py">flood_converter/flood_to_3dtiles.py</a>よりFloodTo3dtilesをインポートしてください。
+浸水タイルをXYZタイルに変換する機能を利用するには、ライブラリ内の<a href="https://github.com/eukarya-inc/plateauutils/blob/main/plateauutils/flood_converter/flood_to_3dtiles.py">flood_converter/flood_to_png.py</a>よりFloodToPngをインポートしてください。</p>
+<p>以下はサンプルコードです。</p>
+<pre><code class="lang-python">&gt;&gt;&gt; from plateauutils.flood_converter.flood_to_3dtiles import FloodTo3dtiles
+&gt;&gt;&gt; f = FloodTo3dtiles()
+&gt;&gt;&gt; f.convert('/tmp/floodmap_depth', '/tmp/depth_3dtiles')
+&gt;&gt;&gt; from plateauutils.flood_converter.flood_to_png import FloodToPng
+&gt;&gt;&gt; p = FloodToPng('/tmp/floodmap_depth')
+&gt;&gt;&gt; p.parse('/tmp/depth_png')
+</code></pre>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

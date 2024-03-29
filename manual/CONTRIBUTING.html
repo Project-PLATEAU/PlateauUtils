@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+
+  <head>
+    <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>開発者向け情報 </title>
+      <meta name="viewport" content="width=device-width">
+      <meta name="title" content="開発者向け情報 ">
+    
+    
+      <link rel="shortcut icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../styles/docfx.vendor.min.css">
+      <link rel="stylesheet" href="../styles/docfx.css">
+      <link rel="stylesheet" href="../styles/main.css">
+      <meta property="docfx:navrel" content="../toc.html">
+      <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../resources/logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+
+        <div id="search-results">
+          <div class="search-list">Search Results for <span></span></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination" data-first="First" data-prev="Previous" data-next="Next" data-last="Last"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="開発者向け情報">開発者向け情報</h1>
+
+<h2 id="citygmlのパーサーを拡充する">CityGMLのパーサーを拡充する</h2>
+<p>CityGMLのパーサーを拡充する(パースする属性を増やす)には、ライブラリ内の<a href="https://github.com/eukarya-inc/plateauutils/blob/main/plateauutils/parser/city_gml_parser.py">parser/city_gml_parser.py</a>の<code>_parse</code>メソッドを修正します。</p>
+<p>具体的には <code>for city_object_member in city_object_members:</code> のループ内で、以下のように属性を追加します。<a href="https://github.com/eukarya-inc/plateauutils/pull/62">PR#62</a></p>
+<pre><code class="lang-python">            try:
+                # bldg:usageを取得
+                usage = city_object_member.find(&quot;.//bldg:usage&quot;, ns)
+                # bldg:usageのdescriptionを取得
+                usage_xml_path = os.path.normpath(
+                    os.path.join(target, &quot;..&quot;, &quot;../../codelists/Building_usage.xml&quot;)
+                )
+                usage_xml_root = ET.fromstring(zip_file.read(usage_xml_path))
+                usage_text = None
+                for usage_xml_root_child in usage_xml_root.findall(
+                    &quot;.//gml:dictionaryEntry&quot;, ns
+                ):
+                    gml_name = usage_xml_root_child.find(&quot;.//gml:name&quot;, ns)
+                    if str(gml_name.text) == str(usage.text):
+                        usage_text = str(
+                            usage_xml_root_child.find(&quot;.//gml:description&quot;, ns).text
+                        )
+                        break
+            except AttributeError:
+                print(&quot;bldg:usage is NoneType in&quot;, gid, &quot;in&quot;, target)
+                usage_text = None
+</code></pre>
+<p>上記の例では<code>try</code>ブロック内で<code>bldg:usage</code>を取得し、その<code>description</code>を<code>codelists/Building_usage.xml</code>から取得しています。</p>
+<p><code>try</code>ブロックを使うことで、<code>bldg:usage</code>が存在しない場合にエラーが発生することを防ぎます。</p>
+<p>Plateauではファイルによって存在しない属性があるため、<code>try</code>ブロックを使うことでエラーを回避しています。</p>
+<p>次に、<code>usage_text</code>を<code>return_value</code>に追加します。</p>
+<pre><code class="lang-python">            return_value = {
+                &quot;gid&quot;: gid,
+                &quot;center&quot;: None,
+                &quot;min_height&quot;: 10000,
+                &quot;measured_height&quot;: measured_height,
+                &quot;building_structure_type&quot;: building_structure_type_text,
+                &quot;usage&quot;: usage_text,
+            }
+</code></pre>
+<p>最後に<code>parse</code>メソッド及び<code>download_and_parse</code>メソッドのAPIドキュメント部分を修正します。<a href="https://github.com/eukarya-inc/plateauutils/pull/65">PR#65</a></p>
+<p>Plateauでは様々な属性が定義されているため、属性に応じて<code>_parse</code>メソッドを拡充していき、<code>return_value</code>に属性を増やしていきます。</p>
+<p>その際に気をつけるべきことは、属性値の属性の型及び多重度です。属性値の属性の型及び多重度は、<a href="https://www.mlit.go.jp/plateau/file/libraries/doc/plateau_doc_0001_ver03.pdf">Plateauのドキュメント</a>に記載されています。</p>
+<p>例えば、<code>uro:realEstateIDOfBuilding</code>は<code>xs:string</code>型であり、<code>1</code>の多重度を持ちます。</p>
+<p>このケースでは、<code>return_value</code>にはString型の値を追加しますが、Plateauのバージョンによっては属性が無いため、<code>try</code>ブロックを使ってエラーを回避します。</p>
+<p>また、<code>uro:realEstateIDOfBuildingUnitOwnership</code>は<code>xs:string</code>型であり、<code>0..*</code>の多重度を持ちます。</p>
+<p>このケースでは、<code>return_value</code>にはString型の<em>配列</em>を追加しますが、属性が存在しない場合でも必ず空の配列を返すようにします。</p>
+<p>このように、属性値の属性の型及び多重度に応じて<code>_parse</code>メソッドを拡充していきます。</p>
+<p><code>bldg:usage</code>のように、<code>gml:CodeType</code>を参照する場合は<code>codelists</code>ディレクトリ内のXMLファイルを参照してください。</p>
+<h2 id="コード整形について">コード整形について</h2>
+<p>コード整形には、<a href="https://pypi.org/project/black/">black</a>を利用しています。</p>
+<p>Visual Studio Codeの場合はすでに設定されているため、特に追加設定は不要ですが、拡張機能 <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.black-formatter">Black Formatter</a> をインストールしておく必要があります。</p>
+<p>なお、現状の設定では保存時に自動的にコード整形が行われます。</p>
+<h2 id="テストについて">テストについて</h2>
+<p>テストには、<a href="https://docs.pytest.org/en/6.2.x/">pytest</a>を利用しています。</p>
+<p>テストに使うデータは、ネットワーク通信を含めたテストの場合はインターネット上にデータを置きます。</p>
+<p>その際、テストデータが肥大化しないように注意をしてください。</p>
+<p>ローカルのテストデータの場合はテストコードと同じ<code>tests</code>ディレクトリ内に配置してください。</p>
+<p>なお、Pull Requestを送る際は、テストが通ることを確認してください。Github workflowでテストが実行されます。</p>
+<h2 id="apiドキュメントについて">APIドキュメントについて</h2>
+<p>APIドキュメントは、<a href="https://www.sphinx-doc.org/ja/master/">Sphinx</a>を利用しています。</p>
+<p>以下のコマンドでビルドできます。</p>
+<pre><code class="lang-bash">cd doc
+make html
+</code></pre>
+<p>ビルド後、<code>doc/_build/html/index.html</code>をブラウザで開くと、APIドキュメントが閲覧できます。</p>
+<h2 id="リリースについて">リリースについて</h2>
+<p>リリースを行うにはまず、<a href="https://github.com/eukarya-inc/plateauutils/blob/main/pyproject.toml">pyproject.toml</a>の<code>version</code>を更新します。</p>
+<p>次に、Release Tagを作成します。</p>
+<pre><code class="lang-bash">git tag v0.0.15
+git push --tags
+</code></pre>
+<p>次に、<a href="https://github.com/eukarya-inc/plateauutils/tags">GitHub Tags</a>からTagを選択し、<code>Release</code>を作成します。</p>
+<p><code>Release</code>を作成する際には、<code>Generate release note</code>を選択して、<code>Release</code>を作成します。</p>
+<p>最後に、<a href="https://pypi.org/project/plateauutils/">PyPI</a>にリリースをアップロードします。PyPIのアカウント及びアクセストークンが必要です。</p>
+<pre><code class="lang-bash">python -m build
+python -m twine upload --repository plateauutils-test dist/*
+python -m twine upload --repository plateauutils dist/*
+</code></pre>
+<p>PyPIにリリースをアップロードする際には、<code>--repository</code>オプションで<code>plateauutils-test</code>を指定することで、テストリリースをアップロードできます。</p>
+
+</article>
+          </div>
+
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+                <h5>In this article</h5>
+                <div></div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+      
+      <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+
+    <script type="text/javascript" src="../styles/docfx.vendor.min.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

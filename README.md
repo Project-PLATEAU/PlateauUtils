@@ -12,7 +12,7 @@
 本システムの詳細については[技術検証レポート](https://www.mlit.go.jp/plateau/file/libraries/doc/plateau_tech_doc_0071_ver01.pdf)を参照してください。
 
 ## 3. 利用手順
-本システムのインストール手順及び利用手順については[利用チュートリアル](https://eukarya-inc.github.io/plateauutils/index.html)を参照してください。
+本システムのインストール手順及び利用手順については[利用チュートリアル](https://plateau-acn.github.io/PLATEAU-Utils/)を参照してください。
 
 ## 4. システム概要
 ### 【3D都市モデルのパーサ】
